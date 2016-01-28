@@ -3,7 +3,8 @@ MAINTAINER Jeroen Geusebroek <me@jeroengeusebroek.nl>
 
 ENV DEBIAN_FRONTEND="noninteractive" \
     TERM="xterm" \
-	PACKAGES="vim python-dev python-flup python-pip expect git sqlite3 libcairo2 libcairo2-dev python-cairo pkg-config nodejs" \
+	PACKAGES="nginx vim python-dev python-flup python-pip expect git sqlite3 libcairo2 libcairo2-dev python-cairo pkg-config nodejs" \
+	TZ="Europe/Amsterdam" \
     REFRESHED_AT='2015-01-28'
 
 RUN apt-get -q update && \
@@ -54,7 +55,7 @@ ADD conf/nginx/nginx.conf /etc/nginx/nginx.conf
 ADD conf/nginx/graphite.conf /etc/nginx/sites-available/graphite.conf
 RUN ln -s /etc/nginx/sites-available/graphite.conf /etc/nginx/sites-enabled/graphite.conf
 
-# Init django admin
+# Init Django admin
 ADD scripts/django_admin_init.exp /usr/local/bin/django_admin_init.exp
 RUN /usr/local/bin/django_admin_init.exp
 
