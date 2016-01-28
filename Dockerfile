@@ -70,10 +70,6 @@ ADD daemons/graphite.sh /etc/service/graphite/run
 ADD daemons/statsd.sh /etc/service/statsd/run
 ADD daemons/nginx.sh /etc/service/nginx/run
 
-# Cleanup
-RUN apt-get clean\
- && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
 # Defaults
 EXPOSE 80:80 2003:2003/udp 2003-2004:2003-2004 2023-2024:2023-2024 8125:8125/udp 8126:8126
 VOLUME ["/opt/graphite", "/etc/nginx", "/opt/statsd", "/etc/logrotate.d", "/var/log"]
