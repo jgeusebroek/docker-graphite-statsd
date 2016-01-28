@@ -1,5 +1,5 @@
 FROM phusion/baseimage:latest
-MAINTAINER Nathan Hopkins <natehop@gmail.com>
+MAINTAINER Jeroen Geusebroek <me@jeroengeusebroek.nl>
 
 ENV DEBIAN_FRONTEND="noninteractive" \
     TERM="xterm" \
