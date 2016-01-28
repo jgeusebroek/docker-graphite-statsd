@@ -12,7 +12,7 @@ expect "Username:" {
 }
 
 expect "Email address:" {
-  send "root.graphite@mailinator.com\r"
+  send "root.graphite@some.domain.local\r"
 }
 
 expect "Password:" {

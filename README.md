@@ -92,7 +92,7 @@ Update the default Django admin user account. _The default is insecure._
 
   * username: root
   * password: root
-  * email: root.graphite@mailinator.com
+  * email: root.graphite@some.domain.local
 
 First login at: [http://localhost/account/login](http://localhost/account/login)
 Then update the root user's profile at: [http://localhost/admin/auth/user/1/](http://localhost/admin/auth/user/1/)
